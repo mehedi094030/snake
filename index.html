@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake</title>
+</head>
+<style type="text/css">
+	#myCanvas{
+		background-color: #333333;
+		display: block;
+		margin: auto;
+	}
+</style>
+<body>
+	<canvas id="myCanvas">
+		Canvas is not support in your browser
+	</canvas>
+
+
+	<script>
+		canvas = document.querySelector("#myCanvas")
+		canvas.width = 900;
+		canvas.height = 600;
+		ctx = canvas.getContext("2d");
+
+		var dir, score, balls;
+
+
+
+		function init() {
+			dir = 'right';
+			score = 0;
+			balls = [
+				{x: 100, y: 80},
+				{x: 120, y: 80},
+				{x: 140, y: 80}
+			];
+		}
+
+		init()
+
+		function add() {
+			lastBall = balls[balls.length-1];
+			balls.push({x: lastBall.x+20, y: lastBall.y});
+		}
+
+
+		function movingSnake() {
+			ctx.clearRect(0,0, 900, 600);
+			balls.shift();
+			add();
+
+			for (var i = 0; i < balls.length; i++) {
+				ball = balls[i];
+				ctx.fillStyle = '#ff0000';
+				if(ball.x>880) {
+					ball.x = 0;	
+				}
+				ctx.fillRect(ball.x,ball.y, 19,19);
+				
+			}
+		}
+
+
+		setInterval(function(){
+			movingSnake()
+		}, 222);
+
+
+
+	</script>
+</body>
+</html>

@@ -1,13 +1,13 @@
 # Snake Games
 ###### This is a simple browser game. You can enjoy it within no installation time.
 
-l. Just pull it
-l. Open it on browser
-l. Enjoy
+* Just pull it
+* Open it on browser
+* Enjoy
 
 ### Instruction
 
-l. Go Right = Right arrow key
-l. Go Up = Up arrow key
-l. Go Left = Left arrow key
-l. Go Down = Down arrow key
+1. Go Right = Right arrow key
+2. Go Up = Up arrow key
+3. Go Left = Left arrow key
+4. Go Down = Down arrow key
